@@ -45,13 +45,13 @@ const toggleItem = (index: number) => {
         onChange = {e => setItemInput(e.target.value)} 
         type="text"
         placeholder="Escreva aqui"
-        className= "w-2/3 h-11 border border-black p-3 text-xs md:text-md lg:text-xl text-black rounded-md mr-3"
+        className= "w-2/3 h-11 border border-black p-3 text-xs md:text-xl text-black rounded-md mr-3"
         />
         <button onClick = {handleAddButton} className= "text-white md:text-xl lg:text-xl md:ml-6 lg:ml-6">Adicionar</button>
         </div>
         <p className = "text-white my-3">{list.length} itens na lista</p>
     
-    <ul className="w-full h-auto min-h-screen max-w-lg list-disc pl-5 text-white">
+    <ul className="w-full h-auto min-h-screen max-w-lg list-disc pl-5 text-white ml-7 md:ml-0">
     {list.map((item, index)=> (
       <li key={index}>
         <input onClick={() => toggleItem(index)} type="checkbox" checked = {item.checked} className= "w-6 h-6 mr-3" />
