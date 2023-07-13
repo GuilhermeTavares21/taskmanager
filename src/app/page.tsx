@@ -36,22 +36,22 @@ const toggleItem = (index: number) => {
   return(
     <>
     
-    <div className = "w-full h-screen flex items-center bg-gray-900 flex-col">
-        <h1 className= "text-4xl mt-5 text-white">Lista de Tarefas</h1>
+    <div className = "w-full h-full flex items-center bg-gray-900 flex-col">
+        <h1 className= "text-2xl lg:text-3xl mt-5 text-white">Lista de Tarefas</h1>
 
-        <div className="container flex w-full max-w-lg my-3 p-4 rounded-md bg-gray-700 border-2 border-gray-400">
+        <div className="flex w-[88%] max-w-lg my-3 p-4 rounded-md bg-gray-700 border-2 border-gray-400">
         <input
         value = {itemInput}
         onChange = {e => setItemInput(e.target.value)} 
         type="text"
-        placeholder="O que deseja acrescentar?"
-        className= "flex-1 border border-black p-3 text-2xl text-black rounded-md mr-3"
+        placeholder="Escreva aqui"
+        className= "w-2/3 h-11 border border-black p-3 text-xs md:text-md lg:text-xl text-black rounded-md mr-3"
         />
-        <button onClick = {handleAddButton} className= "text-white">Adicionar</button>
+        <button onClick = {handleAddButton} className= "text-white md:text-xl lg:text-xl md:ml-6 lg:ml-6">Adicionar</button>
         </div>
         <p className = "text-white my-3">{list.length} itens na lista</p>
     
-    <ul className="w-full max-w-lg list-disc pl-5 text-white">
+    <ul className="w-full h-auto min-h-screen max-w-lg list-disc pl-5 text-white">
     {list.map((item, index)=> (
       <li key={index}>
         <input onClick={() => toggleItem(index)} type="checkbox" checked = {item.checked} className= "w-6 h-6 mr-3" />
